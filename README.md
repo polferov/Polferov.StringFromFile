@@ -22,6 +22,7 @@ public static partial class MyClass {
     // must be a method returning a string
     // must have no parameters
     // must not be in a nested type
+    // the file path is relative to the source file
     [StringFromFile("SomeString.txt")]
     public static partial MyString();
 } 

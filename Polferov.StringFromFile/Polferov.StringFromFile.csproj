@@ -9,7 +9,7 @@
         <EnforceExtendedAnalyzerRules>true</EnforceExtendedAnalyzerRules>
         <NoWarn>RS1035</NoWarn>
         <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-        <Version>0.0.4</Version>
+        <Version>0.0.5</Version>
         <PackageReadmeFile>NuGetReadme.md</PackageReadmeFile>
         <PackageLicenseExpression>MIT</PackageLicenseExpression>
     </PropertyGroup>
