@@ -1,8 +1,22 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Polferov.StringFromFile", "Polferov.StringFromFile\Polferov.StringFromFile.csproj", "{1DF6275C-E47D-4007-A38F-0E1117AE735B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Example", "Example\Example.csproj", "{F2056442-86B9-4E56-9908-323742019F75}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1DF6275C-E47D-4007-A38F-0E1117AE735B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1DF6275C-E47D-4007-A38F-0E1117AE735B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1DF6275C-E47D-4007-A38F-0E1117AE735B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1DF6275C-E47D-4007-A38F-0E1117AE735B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F2056442-86B9-4E56-9908-323742019F75}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F2056442-86B9-4E56-9908-323742019F75}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F2056442-86B9-4E56-9908-323742019F75}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F2056442-86B9-4E56-9908-323742019F75}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
