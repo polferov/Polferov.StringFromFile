@@ -9,7 +9,9 @@
         <EnforceExtendedAnalyzerRules>true</EnforceExtendedAnalyzerRules>
         <NoWarn>RS1035</NoWarn>
         <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-        <Version>0.0.2</Version>
+        <Version>0.0.4</Version>
+        <PackageReadmeFile>NuGetReadme.md</PackageReadmeFile>
+        <PackageLicenseExpression>MIT</PackageLicenseExpression>
     </PropertyGroup>
 
     <ItemGroup>
@@ -26,5 +28,6 @@
 
     <ItemGroup>
         <None Include="$(OutputPath)\$(AssemblyName).dll" Pack="true" PackagePath="analyzers/dotnet/cs" Visible="false"/>
+        <None Include="NuGetReadme.md" Pack="true" PackagePath="NuGetReadme.md"/>
     </ItemGroup>
 </Project>
