@@ -20,7 +20,10 @@ public class StringFromFileGenerator : ISourceGenerator
 
     private IReadOnlyCollection<MethodToGenerate> GetMethodsToGenerate(GeneratorExecutionContext context)
     {
-        var methods = context.Compilation.Assembly.GlobalNamespace.GetMembers().OfType<INamedTypeSymbol>()
+        var allTypes = new List<INamedTypeSymbol>();
+        GetAllTypeSymbols(context.Compilation.Assembly.GlobalNamespace, allTypes);
+        
+        var methods = allTypes
             .SelectMany(t => t.GetMembers().OfType<IMethodSymbol>());
 
         return methods.Select(m =>
@@ -65,6 +68,13 @@ public class StringFromFileGenerator : ISourceGenerator
         }).Where(m => m is not null).ToArray()!;
     }
 
+    private static void GetAllTypeSymbols(INamespaceSymbol ns, List<INamedTypeSymbol> types)
+    {
+        types.AddRange(ns.GetTypeMembers());
+        foreach (var n in ns.GetNamespaceMembers())
+            GetAllTypeSymbols(n, types);
+    }
+    
     private static string GetPath(AttributeData attr, IMethodSymbol m, GeneratorExecutionContext context)
     {
         var path = (string)attr.ConstructorArguments.First().Value!;
